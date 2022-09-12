@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Noto+Sans+JP&display=swap');
+
+/* css reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main section  */
+main {
+    min-height: 100vh;
+    display: grid;
+    position: relative;
+    place-items: center;
+    text-align: center;
+}
+
+main ::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.171);
+
+}
+
+/* .video-container  */
+
+.video-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+/* clock section */
+.clock {
+    font-family: 'Noto Sans JP', sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.time {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#hour {
+    color: rgba(13, 126, 224, 0.74);
+    text-shadow: 4px 5px 24px rgb(0, 68, 255);
+}
+
+#minute {
+    color: rgba(255, 255, 0, 0.705);
+    text-shadow: 4px 5px 24px rgb(255, 187, 0);
+}
+
+#second {
+    color: rgba(255, 0, 0, 0.541);
+    text-shadow: 2px 3px 16px red;
+}
+
+/* =================================== */
+@media screen and (max-width:424px) {
+    .time {
+        font-size: 3rem;
+        height: 100px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #minute {
+        margin: 0 5px;
+    }
+
+}
+
+/* ======================================= */
+
+
+/* para  */
+
+.para {
+
+    color: rgba(240, 248, 255, 0.473);
+    font-size: 1.5rem;
+    font-family: 'Cedarville Cursive', cursive;
+}
